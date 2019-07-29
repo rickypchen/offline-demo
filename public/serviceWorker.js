@@ -73,10 +73,6 @@ const onFetch = (evt) => {
   evt.respondWith(router(evt. request));
 }
 
-const main = async () => {
-  await cacheFiles();
-}
-
 const onInstall = (evt) => {
   self.skipWaiting();
 }
@@ -102,4 +98,7 @@ self.addEventListener("activate",onActivate);
 self.addEventListener("fetch", onFetch);
 self.addEventListener("message",onMessage);
 
+const main = async () => {
+  await cacheFiles();
+}
 main();

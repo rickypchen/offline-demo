@@ -70,11 +70,7 @@ const router = async (req) => {
 }
 
 const onFetch = (evt) => {
-  evt.respondWith(router(evt. request));
-}
-
-const main = async () => {
-  await cacheFiles();
+  evt.respondWith(router(evt.request));
 }
 
 const onInstall = (evt) => {
@@ -102,4 +98,7 @@ self.addEventListener("activate",onActivate);
 self.addEventListener("fetch", onFetch);
 self.addEventListener("message",onMessage);
 
+const main = async () => {
+  await cacheFiles();
+}
 main();

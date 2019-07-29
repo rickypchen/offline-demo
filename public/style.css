@@ -1,0 +1,9 @@
+.awesomeContainer {
+  background-color: purple;
+  color: white;
+  border: 10px solid green;
+}
+
+.hidden {
+  display: none;
+}
